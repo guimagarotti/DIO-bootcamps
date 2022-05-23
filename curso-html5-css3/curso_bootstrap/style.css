@@ -1,0 +1,29 @@
+body {
+    font: 20px Arial, sans-serif;
+}
+
+.navbar {
+    background: #298A08;
+}
+
+.quem-somos {
+    background-color: rgba(0, 0, 255, 0.486);
+}
+
+.parceiros {
+    background-color: rgba(255, 0, 0, 0.397);
+}
+
+.serviços {
+    background-color: rgba(255, 255, 0, 0.521);
+}
+
+.margin {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.rodapé {
+    background-color: black;
+    color: white;
+}
