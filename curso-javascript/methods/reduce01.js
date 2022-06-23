@@ -7,3 +7,8 @@ function somaNumeros(arr) {
 }
 
 console.log(somaNumeros(numeros))
+
+
+
+
+
