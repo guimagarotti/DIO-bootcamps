@@ -1,10 +1,10 @@
-const url_base = 'https://thatcopy.pw/catapi/rest/';
+const BASE_URL = 'https://thatcopy.pw/catapi/rest/';
 const botao = document.getElementById('change-cat');
 const imagemGato = document.getElementById('cat');
 
 const pegaGato = async () => {
     try {
-        const data = await fetch(url_base);
+        const data = await fetch(BASE_URL);
         const json = await data.json();
     
         return json.webpurl;
@@ -19,3 +19,5 @@ const pegaImagem = async () => {
 }
 
 botao.addEventListener('click', pegaImagem);
+
+pegaImagem();

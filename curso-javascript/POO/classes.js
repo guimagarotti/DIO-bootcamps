@@ -1,71 +1,66 @@
-class ContaBancaria {
+class contaBancaria {
     constructor(agencia, numero, tipo) {
         this.agencia = agencia;
         this.numero = numero;
         this.tipo = tipo;
         this._saldo = 0;
     }
-
+    
     get saldo() {
-        return this._saldo;
+        return this._saldo
     }
- 
     set saldo(valor) {
         this._saldo = valor;
     }
 
     sacar(valor) {
         if (valor > this._saldo) {
-            return "Operação negada!";
+            throw new Error("Valor inválido ou insuficiente!")
         }
-        
         this._saldo = this._saldo - valor;
-
         return this._saldo;
     }
 
     depositar(valor) {
         this._saldo = this._saldo + valor;
-
         return this._saldo;
     }
 }
 
-class ContaCorrente extends ContaBancaria {
+class contaCorrente extends contaBancaria {
     constructor(agencia, numero, cartaoCredito) {
-        super(agencia, numero);
-        this.tipo = 'corrente';
+        super(agencia, numero)
+        this.tipo = "corrente";
         this._cartaoCredito = cartaoCredito;
     }
 
-    get cartaoCredito() {
-        return this._cartaoCredito;
+    get cartaoCredito () {
+        return this._cartaoCredito
     }
-
     set cartaoCredito(valor) {
         this._cartaoCredito = valor;
     }
 }
 
-class ContaPoupanca extends ContaBancaria {
-    constructor(agencia, numero) {
-        super(agencia, numero);
-        this.tipo = 'poupança';
+class contaPoupanca extends contaBancaria {
+    constructor (agencia, numero) {
+        super(agencia, numero)
+        this.tipo = "poupanca";
     }
 }
 
-class ContaUniversitaria extends ContaBancaria {
-    constructor(agencia, numero) {
-        super(agencia, numero);
-        this.tipo = 'universitária';
+class contaUniversitaria extends contaBancaria {
+    constructor (agencia, numero) {
+        super(agencia, numero)
+        this.tipo = "universitaria";
     }
 
-    sacar(valor) {
-        if (valor >= 500) {
-            return "Operação negada!"
+    saque(valor) {
+        if (valor > 500) {
+            throw new Error("Valor maior que R$ 500!")
         }
-
         this._saldo = this._saldo - valor;
+        return this._saldo;
     }
 }
 
