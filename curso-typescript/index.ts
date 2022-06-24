@@ -1,24 +1,22 @@
 interface IAnimal {
     nome: string;
     tipo: 'terrestre' | 'aquático';
-    executaRugido(alturaDecibeis: number): void;
+    domestico: boolean;
 }
 
 interface IFelino extends IAnimal {
     visaoNoturna: boolean;
 }
 
-const animal: IAnimal = {
-    nome: 'Elefante',
-    tipo: 'terrestre',
-    executaRugido: (alturaDecibeis) => (`${alturaDecibeis}dB`)
+interface ICanino extends IAnimal {
+    porte: 'pequeno' | 'médio' | 'grande';
 }
 
-animal.executaRugido(30);
+type IDomestico = IFelino | ICanino;
 
-const felino: IFelino = {
-    nome: 'Leão',
+const animal: IDomestico = {
+    nome: 'Cachorro',
     tipo: 'terrestre',
-    visaoNoturna: true,
-    executaRugido: (alturaDecibeis) => (`${alturaDecibeis}dB`)
+    domestico: true,
+    porte: "grande"
 }
