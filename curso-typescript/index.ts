@@ -19,4 +19,4 @@ const animal: IDomestico = {
     tipo: 'terrestre',
     domestico: true,
     porte: "grande"
-}
+};
