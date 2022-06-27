@@ -1,3 +1,4 @@
+// Interfaces e Types
 interface IAnimal {
     nome: string;
     tipo: 'terrestre' | 'aquático';
