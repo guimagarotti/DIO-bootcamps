@@ -10,3 +10,14 @@
     cursor: pointer;
 }
 
+.task-title {
+    cursor: pointer;
+}
+
+.remove-task, .info-task {
+    background-color: #444;
+    border: none;
+    font-size: 24px;
+    color: chartreuse;
+    margin: 0 3px;
+}
