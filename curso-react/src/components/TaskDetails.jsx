@@ -1,6 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router-dom";
 
 import Button from "./Button";
 import "./TaskDetails.css"
@@ -19,7 +18,7 @@ const TaskDetails = () => {
                 <Button onClick={handleBackButtonClick}>Voltar</Button>
             </div>
             <div className="task-details-container">
-                <p>{params.taskTitle}</p>
+                <h2>{params.taskTitle}</h2>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti dolorum aliquam officiis vel, debitis quo?
                 </p>

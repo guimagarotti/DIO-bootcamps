@@ -10,22 +10,11 @@ import TaskDetails from "./components/TaskDetails";
 import "./App.css";
 
 const App = () => {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Jogar futebol",
-      completed: false,
-    },
-    {
-      id: 2,
-      title: "Ler livros",
-      completed: true,
-    }
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
     const fetchTasks = async () => {
-      const { data } = await axios.get("https://jsonplaceholder.cypress.io/todos?_limit=10");
+      const { data } = await axios.get("https://jsonplaceholder.cypress.io/todos?_limit=9");
 
       setTasks(data)
     }

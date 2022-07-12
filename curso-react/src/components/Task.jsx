@@ -19,7 +19,7 @@ const Task = ({task, handleIdTask, handleTaskRemove}) => {
             <div className="container-emotes">
                 <button className="remove-task" onClick={() => handleTaskRemove(task.id)}><CgClose /></button>
                 
-                <button className="info-task" onClick={handleTaskDetailsClick}><CgInfo/></button>
+                <button className="info-task" onClick={handleTaskDetailsClick}><CgInfo /></button>
             </div>
         </div>
     )
