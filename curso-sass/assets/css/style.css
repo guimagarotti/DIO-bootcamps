@@ -1,13 +1,37 @@
-.btn, .btn-laranja {
+.btn-laranja {
   width: 200px;
   padding: 10px 0;
   background: transparent;
   border: 1px solid black;
   border-radius: 10px;
+  display: block;
+  margin: 20px 0;
+  background-color: orange;
+  color: #fff;
 }
 
-.btn-laranja {
-  background-color: orange;
+.btn-verde {
+  width: 200px;
+  padding: 10px 0;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: block;
+  margin: 20px 0;
+  background-color: green;
+  color: #fff;
+}
+
+.btn-azul {
+  width: 200px;
+  padding: 10px 0;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: block;
+  margin: 20px 0;
+  background-color: blue;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
