@@ -1,0 +1,9 @@
+.btn {
+    padding: 5px 30px;
+    border-radius: $button-radius;
+
+    &.btn-laranja {
+        background-color: $color-tertiary;
+        color: $color-white;
+    }
+}
