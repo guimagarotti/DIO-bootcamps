@@ -1,0 +1,33 @@
+@import './variaveis.scss';
+
+@mixin button-color($background-color, $color) {
+    background-color: $background-color;
+    color: $color;
+
+    &:hover {
+        background: mix($background-color, blue);
+    }
+}
+
+.btn {
+    width: 200px;
+    padding: 10px 0;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: block;
+    margin: 20px 0;
+    
+    &.btn-laranja {
+        @include button-color($color-orange, #fff);
+    }
+    
+    &.btn-verde {
+        @include button-color($color-green, #fff);
+    }
+    
+    &.btn-azul {
+        @include button-color($color-blue, #fff);
+    }
+}
+
